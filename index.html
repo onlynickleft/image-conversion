@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Convert Images</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+	<div id="main-container">
+
+		<div class="form-container">
+			<h1>Convert Images</h1>
+			<form class="upload-image-form" action="index.html" method="post" enctype="multipart/form-data">
+
+				<button id="submit-form" type="submit" disabled name="submit">Submit</button>
+				<button id="reset-form" type="reset">Reset</button>
+
+				<div class="form-section">
+					<div class="form-element-container">
+						<label>Select Format to Convert To</label>
+						<select class="converted-format">
+							<option value="webp" selected>WEBP</option>
+							<option value="jpeg">JPG</option>
+							<option value="png" data-lossless="1">PNG</option>
+						</select>
+						<label for="quality">Quality</label>
+						<input type="number" class="quality" min="0" max="100" value="0" disabled>
+					</div>
+					<div class="form-element-container">
+						<label>Upload Image</label>
+						<input class="upload-image" type="file" name="upload_image1" accept="image/webp, image/png, image/jpeg, image/gif" data-image-file-input data-max-filesize="104857600">
+					</div>
+					<div class="output-images-list">
+						<h2 class="preview-images-header fw-700">Preview Images</h2>
+						<div class="image-preview-main-container">
+							<div class="image-preview-container">
+								<div class="fw-500"></div>
+								<div class="image-container original"></div>
+								<div class="filesize">File Size: <span></span></div>
+							</div>
+							<div class="image-preview-container">
+								<div class="fw-500"></div>
+								<div class="image-container converted"></div>
+								<div class="filesize">File Size: <span></span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="./js/main.js" type="module"></script>
+	<!-- End of scripts -->
+
+</body>
+
+</html>
